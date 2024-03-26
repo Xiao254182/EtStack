@@ -1,0 +1,97 @@
+/* dashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px; /* Add padding around the content */
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff; /* 设置超链接的颜色为蓝色 */
+    /*text-decoration: none; !* 移除超链接的下划线 *!*/
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.form-container {
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto; /* 让表单水平居中 */
+}
+
+.table-container {
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: calc(100% - 15px); /* Adjust input width to fit in the form */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 5px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

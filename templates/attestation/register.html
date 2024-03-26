@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="../../static/img/favicon.ico">
+    <link rel="stylesheet" href="../../static/css/register.css"> <!-- 外部引用形式的CSS -->
+    <title>EtStack</title>
+</head>
+<body>
+{#<img src="../../static/img/logo.png">#}
+<h1>EtStack注册页面</h1>
+
+<form method="post">
+    <label>学号:
+        <input type="text" name="stunum" placeholder="学号">
+    </label>
+    <label>用户名:
+        <input type="text" name="name" placeholder="用户名">
+    </label>
+    <label>密码:
+        <input type="password" name="pass" placeholder="密码">
+    </label>
+    <button type="submit">提交</button>
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<p>已有账号？
+    <a href="/">点击去登陆</a>
+</p>
+
+</body>
+</html>
