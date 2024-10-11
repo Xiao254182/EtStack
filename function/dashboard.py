@@ -16,7 +16,7 @@ def dashboard_route():
         if request.method == 'POST':
             ttyd_name = froms["ttyd"]
             start_ttyd(ttyd_name)
-            return redirect('http://192.168.100.144:7681')
+            return redirect('http://<<ipaddress>>:7681')
     if 'user' in session:
         if request.method == 'GET':
             user = session['user']
