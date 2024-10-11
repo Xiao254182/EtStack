@@ -74,6 +74,8 @@ if [ $(echo $? -ne 0) ];then
     pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r /root/requirements.txt
 fi
 
+#修改ttyd自定义地址
+sed -i "s/<<ipaddress>>/${ip1}/g" function/dashboard.py
 chmod +x ttyd
 mv ttyd /usr/sbin/
 
